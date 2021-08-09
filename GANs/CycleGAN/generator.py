@@ -79,9 +79,3 @@ class Generator(nn.Module):
         # Propagate through the last layer:
         return torch.tanh(self.last_layer(x))
 
-"""
-x = torch.randn((2,3,256,256))
-model = Generator(3)
-preds = model(x)
-print(preds.shape)
-"""

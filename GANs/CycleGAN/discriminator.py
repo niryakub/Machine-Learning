@@ -36,9 +36,3 @@ class Discriminator(nn.Module):
         x = self.initial_block(x)
         return torch.sigmoid(self.model(x)) # recall that the disc' returns a patchgan-output and not a singular value.
 
-""" TEST
-x = torch.randn((5,3,256,256))
-model = Discriminator(in_channels=3)
-preds = model(x)
-print(preds.shape)
-"""
